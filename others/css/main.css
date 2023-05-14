@@ -2789,10 +2789,10 @@ input, select, textarea {
 			}
 
 			.tiles article:before {
-				-moz-transition: opacity 0.5s ease;
-				-webkit-transition: opacity 0.5s ease;
-				-ms-transition: opacity 0.5s ease;
-				transition: opacity 0.5s ease;
+				-moz-transition: opacity 0.2s ease;
+				-webkit-transition: opacity 0.2s ease;
+				-ms-transition: opacity 0.2s ease;
+				transition: opacity 0.2s ease;
 				bottom: 0;
 				content: '';
 				display: block;
@@ -3240,17 +3240,17 @@ input, select, textarea {
 						}
 
 		#header.reveal {
-			-moz-animation: reveal-header 0.35s ease;
-			-webkit-animation: reveal-header 0.35s ease;
-			-ms-animation: reveal-header 0.35s ease;
-			animation: reveal-header 0.35s ease;
+			-moz-animation: reveal-header 0.15s ease;
+			-webkit-animation: reveal-header 0.15s ease;
+			-ms-animation: reveal-header 0.15s ease;
+			animation: reveal-header 0.15s ease;
 		}
 
 		#header.alt {
-			-moz-transition: opacity 0.5s ease;
-			-webkit-transition: opacity 0.5s ease;
-			-ms-transition: opacity 0.5s ease;
-			transition: opacity 0.5s ease;
+			-moz-transition: opacity 0.2s ease;
+			-webkit-transition: opacity 0.2s ease;
+			-ms-transition: opacity 0.2s ease;
+			transition: opacity 0.2s ease;
 			-moz-transition-delay: 0.05s;
 			-webkit-transition-delay: 0.05s;
 			-ms-transition-delay: 0.05s;
@@ -3406,10 +3406,10 @@ input, select, textarea {
 	}
 
 		#banner:after {
-			-moz-transition: opacity 0.5s ease;
-			-webkit-transition: opacity 0.5s ease;
-			-ms-transition: opacity 0.5s ease;
-			transition: opacity 0.5s ease;
+			-moz-transition: opacity 0.2s ease;
+			-webkit-transition: opacity 0.2s ease;
+			-ms-transition: opacity 0.2s ease;
+			transition: opacity 0.2s ease;
 			-moz-transition-delay: 0.05s;
 			-webkit-transition-delay: 0.05s;
 			-ms-transition-delay: 0.05s;
@@ -3432,10 +3432,10 @@ input, select, textarea {
 		}
 
 		#banner > .inner {
-			-moz-transition: opacity 0.25s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
-			-webkit-transition: opacity 0.25s ease, -webkit-transform 0.5s ease-out, -webkit-filter 0.5s ease, -webkit-filter 0.5s ease;
-			-ms-transition: opacity 0.25s ease, -ms-transform 0.5s ease-out, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
-			transition: opacity 0.25s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
+			-moz-transition: opacity 0.25s ease, -moz-transform 0.2s ease-out, -moz-filter 0.2s ease, -webkit-filter 0.2s ease;
+			-webkit-transition: opacity 0.25s ease, -webkit-transform 0.2s ease-out, -webkit-filter 0.2s ease, -webkit-filter 0.2s ease;
+			-ms-transition: opacity 0.25s ease, -ms-transform 0.2s ease-out, -ms-filter 0.2s ease, -webkit-filter 0.2s ease;
+			transition: opacity 0.25s ease, transform 0.2s ease-out, filter 0.2s ease, -webkit-filter 0.2s ease;
 			padding: 0 !important;
 			position: relative;
 			z-index: 2;
@@ -3784,10 +3784,10 @@ input, select, textarea {
 /* Menu */
 
 	#menu {
-		-moz-transition: -moz-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		-webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		-ms-transition: -ms-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+		-moz-transition: -moz-transform 0.15s ease, opacity 0.15s ease, visibility 0.15s;
+		-webkit-transition: -webkit-transform 0.15s ease, opacity 0.15s ease, visibility 0.15s;
+		-ms-transition: -ms-transform 0.15s ease, opacity 0.15s ease, visibility 0.15s;
+		transition: transform 0.15s ease, opacity 0.15s ease, visibility 0.15s;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3816,10 +3816,10 @@ input, select, textarea {
 	}
 
 		#menu .inner {
-			-moz-transition: -moz-transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
-			-webkit-transition: -webkit-transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
-			-ms-transition: -ms-transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
-			transition: transform 0.35s ease-out, opacity 0.35s ease, visibility 0.35s;
+			-moz-transition: -moz-transform 0.15s ease-out, opacity 0.15s ease, visibility 0.15s;
+			-webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s ease, visibility 0.15s;
+			-ms-transition: -ms-transform 0.15s ease-out, opacity 0.15s ease, visibility 0.15s;
+			transition: transform 0.15s ease-out, opacity 0.15s ease, visibility 0.15s;
 			-moz-transform: rotateX(20deg);
 			-webkit-transform: rotateX(20deg);
 			-ms-transform: rotateX(20deg);
