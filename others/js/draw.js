@@ -4,8 +4,8 @@ const charRatios = new Map([
     ["F", 0.567],["G", 0.511],["H", 0.567],["I", 0.406],["J", 0.567],
     ["K", 0.463],["L", 0.513],["M", 0.717],["N", 0.697],["O", 0.604],
     ["P", 0.439],["Q", 0.645],["R", 0.505],["S", 0.488],["T", 0.629],
-    ["U", 0.629],["V", 0.595],["W", 0.826],["X", 0.561],["Y", 0.561],
-    ["Z", 0.601],[" ", 0.319],["-",0.293],[",",0.175],["'",0.175],
+    ["U", 0.629],["V", 0.595],["W", 0.793],["X", 0.561],["Y", 0.561],
+    ["Z", 0.601],[" ", 0.319],["-",0.293],[",",0.175],["'",0.175],[".",0.175],
     ["1", 0.262],["2", 0.553],["3", 0.494],["4", 0.564],
     ["5", 0.511],["6", 0.511],["7", 0.609],["8", 0.491],["9", 0.491],
     ["0", 0.592]
@@ -109,7 +109,7 @@ function prepareCanvasWidth(word) {
 }
 
 async function drawImage(word) {
-    word = word.toUpperCase();
+    word = word.toUpperCase()
     prepareCanvasWidth(word);
     loadImage = async img => {
         return new Promise((resolve, reject) => {
@@ -119,6 +119,8 @@ async function drawImage(word) {
         });
     };
     var prevWidth = 0;
+
+
     for(let char of word) {
         var newImage = new Image();
         if(charRatios.has(char)) {
@@ -126,6 +128,10 @@ async function drawImage(word) {
                 case ",":
                   // code block
                   newImage.src = "others/js/rescs/characters/Comma.png";
+                  break;
+                case ".":
+                  // code block
+                  newImage.src = "others/js/rescs/characters/Stop.png";
                   break;
                 case "'":
                   // code block
@@ -144,6 +150,7 @@ async function drawImage(word) {
               }
             
         } else {
+            char = " ";
             newImage.src = "others/js/rescs/characters/Space.png";
         }
         // console.log(newImage.src);

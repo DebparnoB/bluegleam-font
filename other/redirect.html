@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../others/css/main.css" />
+		<noscript><link rel="stylesheet" href="../others/css/noscript.css" /></noscript>
+    </head>
+    <body>
+        <div style="padding: 40px; font-size: 100%">
+            <input type="text" name="webUrl"
+            style="width: 60%;
+                    height: 6%;" 
+            id="webUrl" value="https://bluegleam-font.vercel.app" readonly="readonly">
+            </br>
+            <button class="button small scrolly" onclick="myFunction()">Copy url</button>
+        </div>
+    </body>
+    <script>
+        var copyText = document.getElementById("webUrl");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+    </script>
+    
+</html>
