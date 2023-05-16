@@ -2,6 +2,19 @@
     <head>
         <link rel="stylesheet" href="../others/css/main.css" />
 		<noscript><link rel="stylesheet" href="../others/css/noscript.css" /></noscript>
+        <script>
+            var isMI = navigator.userAgent.indexOf("MiuiBrowser") != -1 ? true:false;
+			if(!isMI) {
+				var link = document.createElement('a');
+				link.href = "../index.html";
+				var clickEvent = new MouseEvent('click', {
+					view: window,
+					bubbles: true,
+					cancelable: false
+				});
+				link.dispatchEvent(clickEvent);
+			}
+        </script>
     </head>
     <body>
         <div style="padding: 40px; font-size: 100%">
