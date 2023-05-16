@@ -10,6 +10,16 @@ const charRatios = new Map([
     ["5", 0.511],["6", 0.511],["7", 0.609],["8", 0.491],["9", 0.491],
     ["0", 0.592],["_",0.081]
   ]);
+
+  
+  var isInsta = navigator.userAgent.indexOf("Instagram") != -1 ? true:false;
+  var isFB = navigator.userAgent.indexOf("FB_IAB") != -1 ? true:false;
+
+
+if(isFB || isInsta) {
+    document.getElementById("downloadErrorMsg").style.display = "";
+}
+
 var ctx = canvas.getContext('2d');
 drawImage("sample");
 var generateBtn = document.querySelector('#generate');
