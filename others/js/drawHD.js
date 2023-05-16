@@ -25,6 +25,7 @@ downloadHDButton.addEventListener("click", function() {
 
 //Functions
 async function drawImageHD(word) {
+    disableDownload(true);
     word = word.toUpperCase();
 
     loadImage = async img => {
@@ -92,6 +93,7 @@ async function drawImageHD(word) {
         ctx.drawImage(newImage, prevWidth, 0, width, height);
         prevWidth = prevWidth + width;
     }
+    disableDownload(false);
 }
 
 
@@ -111,4 +113,8 @@ function downloadCanvasAsImage(canvasId, filename) {
       cancelable: false
     });
     link.dispatchEvent(clickEvent);
+  }
+
+  function disableDownload(value) {
+    document.getElementById("downloadDHBttn").disabled = value;
   }
