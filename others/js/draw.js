@@ -8,7 +8,7 @@ const charRatios = new Map([
     ["Z", 0.601],[" ", 0.319],["-",0.293],[",",0.175],["'",0.175],[".",0.175],
     ["1", 0.262],["2", 0.553],["3", 0.494],["4", 0.564],
     ["5", 0.511],["6", 0.511],["7", 0.609],["8", 0.491],["9", 0.491],
-    ["0", 0.592]
+    ["0", 0.592],["_",0.081]
   ]);
 var ctx = canvas.getContext('2d');
 drawImage("sample");
@@ -18,7 +18,7 @@ var downloadBtnBlack = document.querySelector('#downloadBlack');
 var downloadBtnHD = document.querySelector('#downloadHD');
 var clearBtn = document.querySelector('#clear');
 var currentText = "";
-window.inputText = "sample";
+var filename = "sample";
 
 
 //Events---------------
@@ -33,7 +33,7 @@ generateBtn.addEventListener("click", function() {
 
 downloadBtn.addEventListener("click", function() {
     if(currentText!=="") {
-        downloadCanvasAsImage("myCanvas",currentText,"png");
+        downloadCanvasAsImage("myCanvas",filename,"png");
     } else {
         downloadCanvasAsImage("myCanvas","SAMPLE","png");
     }
@@ -42,7 +42,7 @@ downloadBtn.addEventListener("click", function() {
 
 downloadBtnBlack.addEventListener("click", function() {
     if(currentText!=="") {
-        downloadCanvasAsImage("myCanvas",currentText,"jpeg");
+        downloadCanvasAsImage("myCanvas",filename,"jpeg");
     } else {
         downloadCanvasAsImage("myCanvas","SAMPLE","jpeg");
     }
@@ -52,11 +52,10 @@ downloadBtnBlack.addEventListener("click", function() {
 downloadBtnHD.addEventListener("click", function() {
     var link = document.createElement('a');
     if(currentText!=="") {
-        link.href = "canvaspage.html?field="+currentText;
+        link.href = "canvaspage.html?field="+filename;
     } else {
         link.href = "canvaspage.html?field=SAMPLE";
     }
-    link.setAttribute("data-name","sample");
     link.target = "_blank";
   
     // Programmatically trigger a click on the link
@@ -103,7 +102,8 @@ function prepareCanvasWidth(word) {
 }
 
 async function drawImage(word) {
-    word = word.toUpperCase()
+    filename = word.toUpperCase();
+    word = "_" + filename +"_";
     prepareCanvasWidth(word);
     loadImage = async img => {
         return new Promise((resolve, reject) => {

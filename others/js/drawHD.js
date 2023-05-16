@@ -7,26 +7,28 @@ const charRatios = new Map([
     ["Z", 0.601],[" ", 0.319],["-",0.293],[",",0.175],["'",0.175],[".",0.175],
     ["1", 0.262],["2", 0.553],["3", 0.494],["4", 0.564],
     ["5", 0.511],["6", 0.511],["7", 0.609],["8", 0.491],["9", 0.491],
-    ["0", 0.592]
+    ["0", 0.592],["_",0.081]
   ]);
 const canvas = document.querySelector('#canvasHD');
 var ctx = canvas.getContext('2d');
 var url_string = $(location).attr('href');
 var url = new URL(url_string);
 var paramValue = url.searchParams.get("field");
+var filename = "sample";
 
 var downloadHDButton = document.querySelector('#downloadDHBttn');
 drawImageHD(paramValue.trim())
 
 downloadHDButton.addEventListener("click", function() {
-    downloadCanvasAsImage("canvasHD",paramValue);
+    downloadCanvasAsImage("canvasHD",filename);
 } )
 
 
 //Functions
 async function drawImageHD(word) {
     disableDownload(true);
-    word = word.toUpperCase();
+    filename = word.toUpperCase();
+    word = "_" + filename + "_";
 
     loadImage = async img => {
         return new Promise((resolve, reject) => {
@@ -84,6 +86,7 @@ async function drawImageHD(word) {
               }
             
         } else {
+            char = " ";
             newImage.src = "others/js/rescs/characters/Space.png";
         }
         // console.log(newImage.src);
@@ -118,3 +121,8 @@ function downloadCanvasAsImage(canvasId, filename) {
   function disableDownload(value) {
     document.getElementById("downloadDHBttn").disabled = value;
   }
+
+  function trimSymbol(str) {
+    
+  }
+
