@@ -11,9 +11,17 @@ const charRatios = new Map([
   ]);
 const canvas = document.querySelector('#canvasHD');
 var ctx = canvas.getContext('2d');
-var url_string = $(location).attr('href');
-var url = new URL(url_string);
-var paramValue = url.searchParams.get("field");
+var paramValue = localStorage.getItem("currentField");
+if(paramValue === null) {
+    var link = document.createElement('a');
+    link.href = "index.html";
+    var clickEvent = new MouseEvent('click', {
+      view: window,
+      bubbles: true,
+      cancelable: false
+    });
+    link.dispatchEvent(clickEvent);
+}
 var filename = "sample";
 
 var downloadHDButton = document.querySelector('#downloadDHBttn');

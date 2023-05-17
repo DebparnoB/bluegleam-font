@@ -62,10 +62,11 @@ downloadBtnBlack.addEventListener("click", function() {
 downloadBtnHD.addEventListener("click", function() {
     var link = document.createElement('a');
     if(currentText!=="") {
-        link.href = "canvaspage.html?field="+filename;
+        localStorage.setItem("currentField", filename);
     } else {
-        link.href = "canvaspage.html?field=SAMPLE";
+        localStorage.setItem("currentField", "SAMPLE");
     }
+    link.href = "canvaspage.html";
     link.target = "_blank";
   
     // Programmatically trigger a click on the link
