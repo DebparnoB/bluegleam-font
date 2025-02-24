@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
+  repository_dispatch:
+    types: [custom-event]
   workflow_dispatch:
   push:
     branches:
